@@ -1,1 +1,10 @@
+<hr>
 <p>server3 works!</p>
+
+<div [ngStyle]="{backgroundColor: getColor()}">this is the content for test ngStyle</div>
+<div [ngClass]="{redColor: getColor() === 'red'}">this is the content for test ngStyle</div>
+<hr>
+<div *ngFor="let e of elements">vong for ne`: {{e}}</div>
+<hr>
+<div *ngFor="let e of elements; let i = index">vong for with index ne`: {{e}} - {{i}}</div>
+<hr>

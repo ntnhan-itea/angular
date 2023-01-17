@@ -3,3 +3,12 @@
 <p>{{this.name}}</p>
 
 <app-servers class="app-root"></app-servers>
+
+<div>{{getPosition()}}</div>
+
+<button (click)="changeAllow()">CLICK ME</button>
+<br>
+<br>
+<button [disabled]="allowButton">CHANGED</button>
+<h3>below is the inner text</h3>
+<div [innerText]="allowButton"></div>

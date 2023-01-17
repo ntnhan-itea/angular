@@ -1,1 +1,20 @@
 <p>server2 works!</p>
+
+<hr>
+<h3>Text server name</h3>
+<input type="text" (input)="onUpdateServerName($event)">
+<p>out put name: {{serverName}}</p>
+
+<h3>Text server name ex2</h3>
+<input type="text" [(ngModel)]="serverName2">
+<p>out put name2: {{serverName2}}</p>
+
+<input type="text" [(ngModel)]="serverNameTemp3">
+<br>
+<button (click)="additionalNameServer()">Click me</button>
+<p>out put name3: {{serverName3}}</p>
+<div *ngIf="haveNameServer(); else noNameServer">I will display whenever we have the server name</div>
+<ng-template #noNameServer>I will display until we have the server name</ng-template>
+<br>
+<button class="btn btn-primary" (click)="onReset()" [disabled]="!isEnabled()">Reset</button>
+<hr>
